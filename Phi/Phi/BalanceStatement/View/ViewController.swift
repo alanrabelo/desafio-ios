@@ -69,5 +69,9 @@ extension ViewController: BalanceStatementViewModelDelegate {
     func didLoadStatement(atIndexes indexes: [IndexPath]) {
         homeView.tableView.insertRows(at: indexes, with: .left)
     }
+    
+    func didChangeBalanceVisibility(visible: Bool) {
+        self.homeView.changeVisibility(visible: visible)
+    }
 }
 

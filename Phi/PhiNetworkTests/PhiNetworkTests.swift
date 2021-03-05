@@ -24,7 +24,6 @@ class PhiNetworkTests: XCTestCase {
                 case .success(let string):
                     print(string)
                     expectation.fulfill()
-                    
                 case .failure(let error):
                     XCTFail(error.localizedDescription)
                 }

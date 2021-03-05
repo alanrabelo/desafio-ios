@@ -11,7 +11,7 @@ class StatementViewModel {
     private let statement: StatementItem
     
     var value: String {
-        return "\(Double(statement.amount ?? 0) / 100.0)"
+        return (Double(statement.amount ?? 0) / 100.0).monetary
     }
     
     var details: String {

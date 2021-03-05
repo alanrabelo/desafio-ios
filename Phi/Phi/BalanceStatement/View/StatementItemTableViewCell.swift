@@ -114,15 +114,11 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
     func buildViewHierarchy() {
         
         addSubview(background)
-        
-        background.backgroundColor = .yellow
-        
+                
         verticalStack.addArrangedSubview(labelDetails)
         verticalStack.addArrangedSubview(labelDestination)
         verticalStack.addArrangedSubview(labelAmmount)
-        
-        
-        
+                
         horizontalStack.addArrangedSubview(verticalStack)
         horizontalStack.addArrangedSubview(labelDate)
         background.addSubview(verticalLine)
@@ -130,8 +126,6 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
 
         background.addSubview(horizontalStack)
         background.addSubview(pixLabel)
-        background.backgroundColor = .yellow
-        
     }
     
     func setupConstraints() {

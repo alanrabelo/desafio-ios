@@ -26,6 +26,8 @@ class HomeView: UIView {
         return tableView
     }()
     
+    private var heightConstraint: NSLayoutConstraint?
+    private let defaultBalanceHeight: CGFloat = 100
     // MARK: - Initializers
     init() {
         super.init(frame: .zero)
@@ -34,6 +36,16 @@ class HomeView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    func changeVisibility(visible: Bool) {
+        
+        self.heightConstraint?.constant = visible ? 100 : 0
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.1, options: .curveEaseInOut) {
+            self.balanceView.alpha = visible ? 1 : 0
+            self.layoutIfNeeded()
+        }
+
     }
     
 }
@@ -47,12 +59,20 @@ extension HomeView: ViewConfiguration {
     }
     
     func setupConstraints() {
-        let balanceViewConstraints = [
+        
+        self.heightConstraint = NSLayoutConstraint(item: balanceView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: defaultBalanceHeight)
+        
+        var balanceViewConstraints = [
             NSLayoutConstraint(item: balanceView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: balanceView, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: balanceView, attribute: .top, relatedBy: .equal, toItem: safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: balanceView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 100),
+            heightConstraint!
         ]
+        
+        if let heightConstraint = self.heightConstraint {
+            balanceViewConstraints.append(heightConstraint)
+        }
+
         
         let tableViewConstraints = [
             NSLayoutConstraint(item: tableView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0),

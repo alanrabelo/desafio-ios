@@ -39,6 +39,7 @@
 		CACC922A25F2A313008D0DB9 /* Date+Short.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC922925F2A313008D0DB9 /* Date+Short.swift */; };
 		CACC923B25F2C58F008D0DB9 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC923A25F2C58F008D0DB9 /* BalanceView.swift */; };
 		CACC924125F2D332008D0DB9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC924025F2D332008D0DB9 /* HeaderView.swift */; };
+		CACC924725F2E7DE008D0DB9 /* Double+Monetary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC924625F2E7DE008D0DB9 /* Double+Monetary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		CACC922925F2A313008D0DB9 /* Date+Short.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Short.swift"; sourceTree = "<group>"; };
 		CACC923A25F2C58F008D0DB9 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		CACC924025F2D332008D0DB9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		CACC924625F2E7DE008D0DB9 /* Double+Monetary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Monetary.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +371,7 @@
 			children = (
 				CA5F623425F27CAF00139D7C /* UIColor+Named.swift */,
 				CACC922925F2A313008D0DB9 /* Date+Short.swift */,
+				CACC924625F2E7DE008D0DB9 /* Double+Monetary.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				CA548B9725F1BA9800C5C4AA /* HomeView.swift in Sources */,
 				CA5F622E25F27C1E00139D7C /* StatementItemTableViewCell.swift in Sources */,
 				CA548AEE25F1620F00C5C4AA /* Statement.swift in Sources */,
+				CACC924725F2E7DE008D0DB9 /* Double+Monetary.swift in Sources */,
 				CACC924125F2D332008D0DB9 /* HeaderView.swift in Sources */,
 				CA548A5C25F12C9500C5C4AA /* AppDelegate.swift in Sources */,
 				CA548B1425F1660000C5C4AA /* BalanceStatementViewModel.swift in Sources */,

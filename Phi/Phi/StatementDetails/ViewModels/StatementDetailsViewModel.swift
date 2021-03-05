@@ -29,7 +29,7 @@ class StatementDetailsViewModel {
     }
     
     var amount: String {
-        "R$ \(Double(statementDetails?.amount ?? 0)/100)"
+        (Double(statementDetails?.amount ?? 0)/100).monetary
     }
     
     var destination: String {

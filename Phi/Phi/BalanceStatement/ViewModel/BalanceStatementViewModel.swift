@@ -13,6 +13,7 @@ protocol BalanceStatementViewModelDelegate: class {
     func didLoadBalance(amount: String)
     func didLoadStatement(atIndexes indexes: [IndexPath])
     func didSelectElement(item: StatementItem)
+    func didChangeBalanceVisibility(visible: Bool)
 }
 
 class BalanceStatementViewModel: NSObject {
@@ -20,9 +21,8 @@ class BalanceStatementViewModel: NSObject {
     private var balance: Int? {
         didSet {
             DispatchQueue.main.async {
-                self.delegate?.didLoadBalance(amount: "R$ \(Double(self.balance ?? 0)/100.0)")
+                self.delegate?.didLoadBalance(amount: (Double(self.balance ?? 0)/100.0).monetary)
             }
-            print("Update balance")
         }
     }
     
@@ -82,7 +82,6 @@ class BalanceStatementViewModel: NSObject {
 
 extension BalanceStatementViewModel: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(statementItems.count)
         return statementItems.count
     }
     
@@ -125,5 +124,9 @@ extension BalanceStatementViewModel: UITableViewDelegate, UITableViewDataSource 
         if indexPath.row == (page * numberOfItems) - 5 {
             loadStatement()
         }
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        delegate?.didChangeBalanceVisibility(visible: velocity.y < 0)
     }
 }
