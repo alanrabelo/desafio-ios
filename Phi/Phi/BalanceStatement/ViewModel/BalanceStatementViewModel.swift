@@ -26,6 +26,10 @@ class BalanceStatementViewModel: NSObject {
         }
     }
     
+    private var page = 0
+    private let numberOfItems = 15
+    private var noMoreData = false
+    
     let reuseIdentifier: String = "statementCell"
     
     weak var delegate: BalanceStatementViewModelDelegate?
@@ -44,15 +48,30 @@ class BalanceStatementViewModel: NSObject {
     }
     
     func loadStatement() {
-        NetworkLayer.shared.perform(route: .statement(10, 0)) { [weak self] (result: Result<Statement, Error>) in
+        guard noMoreData == false else {
+            return
+        }
+        
+        NetworkLayer.shared.perform(route: .statement(numberOfItems, page)) { [weak self] (result: Result<Statement, Error>) in
             switch result {
             case .success(let statement):
                 guard let items = statement.items else {
                     return
                 }
-                self?.statementItems.append(contentsOf: items)
+                
+                if items.isEmpty {
+                    self?.noMoreData = true
+                }
+                
                 DispatchQueue.main.async {
-                    self?.delegate?.didLoadStatement(atIndexes: [])
+                    self?.statementItems.append(contentsOf: items)
+                    guard let page = self?.page, let numberOfItems = self?.numberOfItems else {
+                        return
+                    }
+                    let range = (page*numberOfItems)..<(page*numberOfItems)+items.count
+                    let indexpaths = range.map( {IndexPath(row: $0, section: 0)} )
+                    self?.page += 1
+                    self?.delegate?.didLoadStatement(atIndexes: indexpaths)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
@@ -63,7 +82,8 @@ class BalanceStatementViewModel: NSObject {
 
 extension BalanceStatementViewModel: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        statementItems.count
+        print(statementItems.count)
+        return statementItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,5 +119,11 @@ extension BalanceStatementViewModel: UITableViewDelegate, UITableViewDataSource 
         let view = HeaderView()
         view.setupViewConfiguration()
         return view
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (page * numberOfItems) - 5 {
+            loadStatement()
+        }
     }
 }

@@ -78,7 +78,6 @@ class BalanceView: UIView, ViewConfiguration {
     }
     
     func setupConstraints() {
-        
         let horizontalStackConstraints = [
             NSLayoutConstraint(item: verticalStack, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: verticalStack, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 20),
@@ -91,6 +90,10 @@ class BalanceView: UIView, ViewConfiguration {
     
     func configureViews() {
         self.backgroundColor = PhiColors.light.color
+    }
+    
+    func updateBalance(amount: String) {
+        self.balanceLabel.text = amount
     }
     
 }

@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, Coordinatable {
 
     internal var coordinator: Coordinator
-    private var viewModel: BalanceStatementViewModel = BalanceStatementViewModel()
+    private var viewModel = BalanceStatementViewModel()
     private var homeView = HomeView()
     
     init(coordinator: Coordinator) {
@@ -23,16 +23,23 @@ class ViewController: UIViewController, Coordinatable {
         self.view = homeView
         homeView.configureViews()
     }
- 
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.barTintColor = PhiColors.light.color
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+    
+    override func viewDidLoad() {
+        setupNavigationBar()
         (self.view as? HomeView)?.setupViewConfiguration()
         self.registerCells()
         homeView.tableView.delegate = viewModel
         homeView.tableView.dataSource = viewModel
         viewModel.delegate = self
+    }
+    
+    func setupNavigationBar() {
+        self.navigationController?.navigationBar.barTintColor = PhiColors.light.color
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
+ 
+    override func viewWillAppear(_ animated: Bool) {
         viewModel.loadBalance()
         viewModel.loadStatement()
     }
@@ -56,11 +63,11 @@ extension ViewController: BalanceStatementViewModelDelegate {
     }
     
     func didLoadBalance(amount: String) {
-        print(amount)
+        homeView.balanceView.updateBalance(amount: amount)
     }
     
     func didLoadStatement(atIndexes indexes: [IndexPath]) {
-        homeView.tableView.reloadData()
+        homeView.tableView.insertRows(at: indexes, with: .left)
     }
 }
 
