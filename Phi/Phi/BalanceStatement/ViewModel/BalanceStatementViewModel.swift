@@ -91,7 +91,13 @@ extension BalanceStatementViewModel: UITableViewDelegate, UITableViewDataSource 
         120
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "Suas Movimentações"
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 70
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = HeaderView()
+        view.setupViewConfiguration()
+        return view
     }
 }

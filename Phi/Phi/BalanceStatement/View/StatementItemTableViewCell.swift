@@ -191,5 +191,6 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
         self.labelDestination.text = viewModel?.destination
         self.labelAmmount.text = viewModel?.value
         self.labelDate.text = viewModel?.date
+        self.selectionStyle = .none
     }
 }
