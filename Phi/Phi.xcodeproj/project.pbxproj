@@ -1,0 +1,1084 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA548A5C25F12C9500C5C4AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548A5B25F12C9500C5C4AA /* AppDelegate.swift */; };
+		CA548A5E25F12C9500C5C4AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548A5D25F12C9500C5C4AA /* SceneDelegate.swift */; };
+		CA548A6025F12C9500C5C4AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548A5F25F12C9500C5C4AA /* ViewController.swift */; };
+		CA548A6625F12C9500C5C4AA /* Phi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA548A6425F12C9500C5C4AA /* Phi.xcdatamodeld */; };
+		CA548A6825F12C9700C5C4AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA548A6725F12C9700C5C4AA /* Assets.xcassets */; };
+		CA548A6B25F12C9700C5C4AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA548A6925F12C9700C5C4AA /* LaunchScreen.storyboard */; };
+		CA548A7625F12C9700C5C4AA /* PhiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548A7525F12C9700C5C4AA /* PhiTests.swift */; };
+		CA548A8125F12C9700C5C4AA /* PhiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548A8025F12C9700C5C4AA /* PhiUITests.swift */; };
+		CA548A9F25F14B3500C5C4AA /* PhiNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA548A9625F14B3500C5C4AA /* PhiNetwork.framework */; };
+		CA548AA625F14B3500C5C4AA /* PhiNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548AA525F14B3500C5C4AA /* PhiNetworkTests.swift */; };
+		CA548AA825F14B3500C5C4AA /* PhiNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = CA548A9825F14B3500C5C4AA /* PhiNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA548AAB25F14B3500C5C4AA /* PhiNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA548A9625F14B3500C5C4AA /* PhiNetwork.framework */; };
+		CA548AAC25F14B3500C5C4AA /* PhiNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA548A9625F14B3500C5C4AA /* PhiNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA548ABA25F14B5000C5C4AA /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548AB925F14B5000C5C4AA /* NetworkLayer.swift */; };
+		CA548AC025F14DA600C5C4AA /* PhiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548ABF25F14DA600C5C4AA /* PhiRoutes.swift */; };
+		CA548AE425F161FA00C5C4AA /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548AE325F161FA00C5C4AA /* Balance.swift */; };
+		CA548AEE25F1620F00C5C4AA /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548AED25F1620F00C5C4AA /* Statement.swift */; };
+		CA548AF425F1627900C5C4AA /* StatementDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548AF325F1627900C5C4AA /* StatementDetails.swift */; };
+		CA548AFF25F163C700C5C4AA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548AFE25F163C700C5C4AA /* AppCoordinator.swift */; };
+		CA548B0A25F164A600C5C4AA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548B0925F164A600C5C4AA /* Coordinator.swift */; };
+		CA548B1425F1660000C5C4AA /* BalanceStatementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548B1325F1660000C5C4AA /* BalanceStatementViewModel.swift */; };
+		CA548B9725F1BA9800C5C4AA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548B9625F1BA9800C5C4AA /* HomeView.swift */; };
+		CA548BA325F1BBDC00C5C4AA /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548BA225F1BBDC00C5C4AA /* ViewConfiguration.swift */; };
+		CA548BA925F1BD9600C5C4AA /* StatementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548BA825F1BD9600C5C4AA /* StatementViewModel.swift */; };
+		CA548BB225F1C0FC00C5C4AA /* StatementDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548BB125F1C0FC00C5C4AA /* StatementDetailsViewController.swift */; };
+		CA548BBC25F1C10500C5C4AA /* StatementDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548BBB25F1C10500C5C4AA /* StatementDetailsView.swift */; };
+		CA548BC225F1C15500C5C4AA /* StatementDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548BC125F1C15500C5C4AA /* StatementDetailsViewModel.swift */; };
+		CA5F622E25F27C1E00139D7C /* StatementItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F622D25F27C1E00139D7C /* StatementItemTableViewCell.swift */; };
+		CA5F623525F27CAF00139D7C /* UIColor+Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F623425F27CAF00139D7C /* UIColor+Named.swift */; };
+		CACC922A25F2A313008D0DB9 /* Date+Short.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC922925F2A313008D0DB9 /* Date+Short.swift */; };
+		CACC923B25F2C58F008D0DB9 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC923A25F2C58F008D0DB9 /* BalanceView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA548A7225F12C9700C5C4AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA548A5025F12C9500C5C4AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA548A5725F12C9500C5C4AA;
+			remoteInfo = Phi;
+		};
+		CA548A7D25F12C9700C5C4AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA548A5025F12C9500C5C4AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA548A5725F12C9500C5C4AA;
+			remoteInfo = Phi;
+		};
+		CA548AA025F14B3500C5C4AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA548A5025F12C9500C5C4AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA548A9525F14B3500C5C4AA;
+			remoteInfo = PhiNetwork;
+		};
+		CA548AA225F14B3500C5C4AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA548A5025F12C9500C5C4AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA548A5725F12C9500C5C4AA;
+			remoteInfo = Phi;
+		};
+		CA548AA925F14B3500C5C4AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA548A5025F12C9500C5C4AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA548A9525F14B3500C5C4AA;
+			remoteInfo = PhiNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CA548AB025F14B3500C5C4AA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CA548AAC25F14B3500C5C4AA /* PhiNetwork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CA548A5825F12C9500C5C4AA /* Phi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA548A5B25F12C9500C5C4AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA548A5D25F12C9500C5C4AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CA548A5F25F12C9500C5C4AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA548A6525F12C9500C5C4AA /* Phi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Phi.xcdatamodel; sourceTree = "<group>"; };
+		CA548A6725F12C9700C5C4AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA548A6A25F12C9700C5C4AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA548A6C25F12C9700C5C4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA548A7125F12C9700C5C4AA /* PhiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA548A7525F12C9700C5C4AA /* PhiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhiTests.swift; sourceTree = "<group>"; };
+		CA548A7725F12C9700C5C4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA548A7C25F12C9700C5C4AA /* PhiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA548A8025F12C9700C5C4AA /* PhiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhiUITests.swift; sourceTree = "<group>"; };
+		CA548A8225F12C9700C5C4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA548A9625F14B3500C5C4AA /* PhiNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhiNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA548A9825F14B3500C5C4AA /* PhiNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhiNetwork.h; sourceTree = "<group>"; };
+		CA548A9925F14B3500C5C4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA548A9E25F14B3500C5C4AA /* PhiNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhiNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA548AA525F14B3500C5C4AA /* PhiNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhiNetworkTests.swift; sourceTree = "<group>"; };
+		CA548AA725F14B3500C5C4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA548AB925F14B5000C5C4AA /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		CA548ABF25F14DA600C5C4AA /* PhiRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhiRoutes.swift; sourceTree = "<group>"; };
+		CA548AE325F161FA00C5C4AA /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		CA548AED25F1620F00C5C4AA /* Statement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		CA548AF325F1627900C5C4AA /* StatementDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementDetails.swift; sourceTree = "<group>"; };
+		CA548AFE25F163C700C5C4AA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CA548B0925F164A600C5C4AA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CA548B1325F1660000C5C4AA /* BalanceStatementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceStatementViewModel.swift; sourceTree = "<group>"; };
+		CA548B9625F1BA9800C5C4AA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CA548BA225F1BBDC00C5C4AA /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		CA548BA825F1BD9600C5C4AA /* StatementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewModel.swift; sourceTree = "<group>"; };
+		CA548BB125F1C0FC00C5C4AA /* StatementDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementDetailsViewController.swift; sourceTree = "<group>"; };
+		CA548BBB25F1C10500C5C4AA /* StatementDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementDetailsView.swift; sourceTree = "<group>"; };
+		CA548BC125F1C15500C5C4AA /* StatementDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementDetailsViewModel.swift; sourceTree = "<group>"; };
+		CA5F622D25F27C1E00139D7C /* StatementItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementItemTableViewCell.swift; sourceTree = "<group>"; };
+		CA5F623425F27CAF00139D7C /* UIColor+Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Named.swift"; sourceTree = "<group>"; };
+		CACC922925F2A313008D0DB9 /* Date+Short.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Short.swift"; sourceTree = "<group>"; };
+		CACC923A25F2C58F008D0DB9 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA548A5525F12C9500C5C4AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA548AAB25F14B3500C5C4AA /* PhiNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A6E25F12C9700C5C4AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A7925F12C9700C5C4AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A9325F14B3500C5C4AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A9B25F14B3500C5C4AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA548A9F25F14B3500C5C4AA /* PhiNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA548A4F25F12C9500C5C4AA = {
+			isa = PBXGroup;
+			children = (
+				CA548A5A25F12C9500C5C4AA /* Phi */,
+				CA548A7425F12C9700C5C4AA /* PhiTests */,
+				CA548A7F25F12C9700C5C4AA /* PhiUITests */,
+				CA548A9725F14B3500C5C4AA /* PhiNetwork */,
+				CA548AA425F14B3500C5C4AA /* PhiNetworkTests */,
+				CA548A5925F12C9500C5C4AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA548A5925F12C9500C5C4AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA548A5825F12C9500C5C4AA /* Phi.app */,
+				CA548A7125F12C9700C5C4AA /* PhiTests.xctest */,
+				CA548A7C25F12C9700C5C4AA /* PhiUITests.xctest */,
+				CA548A9625F14B3500C5C4AA /* PhiNetwork.framework */,
+				CA548A9E25F14B3500C5C4AA /* PhiNetworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA548A5A25F12C9500C5C4AA /* Phi */ = {
+			isa = PBXGroup;
+			children = (
+				CA548BAE25F1C0E500C5C4AA /* StatementDetails */,
+				CA548BA025F1BBC700C5C4AA /* Utils */,
+				CA548B0F25F165B600C5C4AA /* BalanceStatement */,
+				CA548AFD25F163BD00C5C4AA /* Coordinators */,
+				CA548AE125F161E900C5C4AA /* Data */,
+				CA548A5B25F12C9500C5C4AA /* AppDelegate.swift */,
+				CA548A5D25F12C9500C5C4AA /* SceneDelegate.swift */,
+				CA548A6725F12C9700C5C4AA /* Assets.xcassets */,
+				CA548A6925F12C9700C5C4AA /* LaunchScreen.storyboard */,
+				CA548A6C25F12C9700C5C4AA /* Info.plist */,
+				CA548A6425F12C9500C5C4AA /* Phi.xcdatamodeld */,
+			);
+			path = Phi;
+			sourceTree = "<group>";
+		};
+		CA548A7425F12C9700C5C4AA /* PhiTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA548A7525F12C9700C5C4AA /* PhiTests.swift */,
+				CA548A7725F12C9700C5C4AA /* Info.plist */,
+			);
+			path = PhiTests;
+			sourceTree = "<group>";
+		};
+		CA548A7F25F12C9700C5C4AA /* PhiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA548A8025F12C9700C5C4AA /* PhiUITests.swift */,
+				CA548A8225F12C9700C5C4AA /* Info.plist */,
+			);
+			path = PhiUITests;
+			sourceTree = "<group>";
+		};
+		CA548A9725F14B3500C5C4AA /* PhiNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				CA548AB825F14B4300C5C4AA /* Sources */,
+				CA548A9825F14B3500C5C4AA /* PhiNetwork.h */,
+				CA548A9925F14B3500C5C4AA /* Info.plist */,
+			);
+			path = PhiNetwork;
+			sourceTree = "<group>";
+		};
+		CA548AA425F14B3500C5C4AA /* PhiNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA548AA525F14B3500C5C4AA /* PhiNetworkTests.swift */,
+				CA548AA725F14B3500C5C4AA /* Info.plist */,
+			);
+			path = PhiNetworkTests;
+			sourceTree = "<group>";
+		};
+		CA548AB825F14B4300C5C4AA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CA548AB925F14B5000C5C4AA /* NetworkLayer.swift */,
+				CA548ABF25F14DA600C5C4AA /* PhiRoutes.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CA548AE125F161E900C5C4AA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CA548AE225F161EF00C5C4AA /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CA548AE225F161EF00C5C4AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA548AE325F161FA00C5C4AA /* Balance.swift */,
+				CA548AED25F1620F00C5C4AA /* Statement.swift */,
+				CA548AF325F1627900C5C4AA /* StatementDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA548AFD25F163BD00C5C4AA /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				CA548AFE25F163C700C5C4AA /* AppCoordinator.swift */,
+				CA548B0925F164A600C5C4AA /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CA548B0F25F165B600C5C4AA /* BalanceStatement */ = {
+			isa = PBXGroup;
+			children = (
+				CA548B1125F165E100C5C4AA /* ViewModel */,
+				CA548B1025F165DC00C5C4AA /* View */,
+			);
+			path = BalanceStatement;
+			sourceTree = "<group>";
+		};
+		CA548B1025F165DC00C5C4AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA548A5F25F12C9500C5C4AA /* ViewController.swift */,
+				CA548B9625F1BA9800C5C4AA /* HomeView.swift */,
+				CA5F622D25F27C1E00139D7C /* StatementItemTableViewCell.swift */,
+				CACC923A25F2C58F008D0DB9 /* BalanceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA548B1125F165E100C5C4AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA548B1325F1660000C5C4AA /* BalanceStatementViewModel.swift */,
+				CA548BA825F1BD9600C5C4AA /* StatementViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA548BA025F1BBC700C5C4AA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F623325F27C9E00139D7C /* Extensions */,
+				CA548BA125F1BBD200C5C4AA /* Presentation */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CA548BA125F1BBD200C5C4AA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CA548BA225F1BBDC00C5C4AA /* ViewConfiguration.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CA548BAE25F1C0E500C5C4AA /* StatementDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CA548BB025F1C0F100C5C4AA /* View */,
+				CA548BAF25F1C0EC00C5C4AA /* ViewModels */,
+			);
+			path = StatementDetails;
+			sourceTree = "<group>";
+		};
+		CA548BAF25F1C0EC00C5C4AA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CA548BC125F1C15500C5C4AA /* StatementDetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CA548BB025F1C0F100C5C4AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA548BB125F1C0FC00C5C4AA /* StatementDetailsViewController.swift */,
+				CA548BBB25F1C10500C5C4AA /* StatementDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA5F623325F27C9E00139D7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F623425F27CAF00139D7C /* UIColor+Named.swift */,
+				CACC922925F2A313008D0DB9 /* Date+Short.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CA548A9125F14B3500C5C4AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA548AA825F14B3500C5C4AA /* PhiNetwork.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CA548A5725F12C9500C5C4AA /* Phi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA548A8525F12C9700C5C4AA /* Build configuration list for PBXNativeTarget "Phi" */;
+			buildPhases = (
+				CA548A5425F12C9500C5C4AA /* Sources */,
+				CA548A5525F12C9500C5C4AA /* Frameworks */,
+				CA548A5625F12C9500C5C4AA /* Resources */,
+				CA548AB025F14B3500C5C4AA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA548AAA25F14B3500C5C4AA /* PBXTargetDependency */,
+			);
+			name = Phi;
+			productName = Phi;
+			productReference = CA548A5825F12C9500C5C4AA /* Phi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA548A7025F12C9700C5C4AA /* PhiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA548A8825F12C9700C5C4AA /* Build configuration list for PBXNativeTarget "PhiTests" */;
+			buildPhases = (
+				CA548A6D25F12C9700C5C4AA /* Sources */,
+				CA548A6E25F12C9700C5C4AA /* Frameworks */,
+				CA548A6F25F12C9700C5C4AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA548A7325F12C9700C5C4AA /* PBXTargetDependency */,
+			);
+			name = PhiTests;
+			productName = PhiTests;
+			productReference = CA548A7125F12C9700C5C4AA /* PhiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA548A7B25F12C9700C5C4AA /* PhiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA548A8B25F12C9700C5C4AA /* Build configuration list for PBXNativeTarget "PhiUITests" */;
+			buildPhases = (
+				CA548A7825F12C9700C5C4AA /* Sources */,
+				CA548A7925F12C9700C5C4AA /* Frameworks */,
+				CA548A7A25F12C9700C5C4AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA548A7E25F12C9700C5C4AA /* PBXTargetDependency */,
+			);
+			name = PhiUITests;
+			productName = PhiUITests;
+			productReference = CA548A7C25F12C9700C5C4AA /* PhiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CA548A9525F14B3500C5C4AA /* PhiNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA548AAD25F14B3500C5C4AA /* Build configuration list for PBXNativeTarget "PhiNetwork" */;
+			buildPhases = (
+				CA548A9125F14B3500C5C4AA /* Headers */,
+				CA548A9225F14B3500C5C4AA /* Sources */,
+				CA548A9325F14B3500C5C4AA /* Frameworks */,
+				CA548A9425F14B3500C5C4AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhiNetwork;
+			productName = PhiNetwork;
+			productReference = CA548A9625F14B3500C5C4AA /* PhiNetwork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CA548A9D25F14B3500C5C4AA /* PhiNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA548AB125F14B3500C5C4AA /* Build configuration list for PBXNativeTarget "PhiNetworkTests" */;
+			buildPhases = (
+				CA548A9A25F14B3500C5C4AA /* Sources */,
+				CA548A9B25F14B3500C5C4AA /* Frameworks */,
+				CA548A9C25F14B3500C5C4AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA548AA125F14B3500C5C4AA /* PBXTargetDependency */,
+				CA548AA325F14B3500C5C4AA /* PBXTargetDependency */,
+			);
+			name = PhiNetworkTests;
+			productName = PhiNetworkTests;
+			productReference = CA548A9E25F14B3500C5C4AA /* PhiNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA548A5025F12C9500C5C4AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CA548A5725F12C9500C5C4AA = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					CA548A7025F12C9700C5C4AA = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CA548A5725F12C9500C5C4AA;
+					};
+					CA548A7B25F12C9700C5C4AA = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CA548A5725F12C9500C5C4AA;
+					};
+					CA548A9525F14B3500C5C4AA = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					CA548A9D25F14B3500C5C4AA = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CA548A5725F12C9500C5C4AA;
+					};
+				};
+			};
+			buildConfigurationList = CA548A5325F12C9500C5C4AA /* Build configuration list for PBXProject "Phi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA548A4F25F12C9500C5C4AA;
+			productRefGroup = CA548A5925F12C9500C5C4AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA548A5725F12C9500C5C4AA /* Phi */,
+				CA548A7025F12C9700C5C4AA /* PhiTests */,
+				CA548A7B25F12C9700C5C4AA /* PhiUITests */,
+				CA548A9525F14B3500C5C4AA /* PhiNetwork */,
+				CA548A9D25F14B3500C5C4AA /* PhiNetworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA548A5625F12C9500C5C4AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA548A6B25F12C9700C5C4AA /* LaunchScreen.storyboard in Resources */,
+				CA548A6825F12C9700C5C4AA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A6F25F12C9700C5C4AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A7A25F12C9700C5C4AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A9425F14B3500C5C4AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A9C25F14B3500C5C4AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA548A5425F12C9500C5C4AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA548A6025F12C9500C5C4AA /* ViewController.swift in Sources */,
+				CACC923B25F2C58F008D0DB9 /* BalanceView.swift in Sources */,
+				CA548BC225F1C15500C5C4AA /* StatementDetailsViewModel.swift in Sources */,
+				CA548AF425F1627900C5C4AA /* StatementDetails.swift in Sources */,
+				CA548AE425F161FA00C5C4AA /* Balance.swift in Sources */,
+				CA548BBC25F1C10500C5C4AA /* StatementDetailsView.swift in Sources */,
+				CA548BA925F1BD9600C5C4AA /* StatementViewModel.swift in Sources */,
+				CA548A6625F12C9500C5C4AA /* Phi.xcdatamodeld in Sources */,
+				CA548AFF25F163C700C5C4AA /* AppCoordinator.swift in Sources */,
+				CACC922A25F2A313008D0DB9 /* Date+Short.swift in Sources */,
+				CA548B9725F1BA9800C5C4AA /* HomeView.swift in Sources */,
+				CA5F622E25F27C1E00139D7C /* StatementItemTableViewCell.swift in Sources */,
+				CA548AEE25F1620F00C5C4AA /* Statement.swift in Sources */,
+				CA548A5C25F12C9500C5C4AA /* AppDelegate.swift in Sources */,
+				CA548B1425F1660000C5C4AA /* BalanceStatementViewModel.swift in Sources */,
+				CA5F623525F27CAF00139D7C /* UIColor+Named.swift in Sources */,
+				CA548BA325F1BBDC00C5C4AA /* ViewConfiguration.swift in Sources */,
+				CA548BB225F1C0FC00C5C4AA /* StatementDetailsViewController.swift in Sources */,
+				CA548A5E25F12C9500C5C4AA /* SceneDelegate.swift in Sources */,
+				CA548B0A25F164A600C5C4AA /* Coordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A6D25F12C9700C5C4AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA548A7625F12C9700C5C4AA /* PhiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A7825F12C9700C5C4AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA548A8125F12C9700C5C4AA /* PhiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A9225F14B3500C5C4AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA548ABA25F14B5000C5C4AA /* NetworkLayer.swift in Sources */,
+				CA548AC025F14DA600C5C4AA /* PhiRoutes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA548A9A25F14B3500C5C4AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA548AA625F14B3500C5C4AA /* PhiNetworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA548A7325F12C9700C5C4AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA548A5725F12C9500C5C4AA /* Phi */;
+			targetProxy = CA548A7225F12C9700C5C4AA /* PBXContainerItemProxy */;
+		};
+		CA548A7E25F12C9700C5C4AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA548A5725F12C9500C5C4AA /* Phi */;
+			targetProxy = CA548A7D25F12C9700C5C4AA /* PBXContainerItemProxy */;
+		};
+		CA548AA125F14B3500C5C4AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA548A9525F14B3500C5C4AA /* PhiNetwork */;
+			targetProxy = CA548AA025F14B3500C5C4AA /* PBXContainerItemProxy */;
+		};
+		CA548AA325F14B3500C5C4AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA548A5725F12C9500C5C4AA /* Phi */;
+			targetProxy = CA548AA225F14B3500C5C4AA /* PBXContainerItemProxy */;
+		};
+		CA548AAA25F14B3500C5C4AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA548A9525F14B3500C5C4AA /* PhiNetwork */;
+			targetProxy = CA548AA925F14B3500C5C4AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA548A6925F12C9700C5C4AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA548A6A25F12C9700C5C4AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA548A8325F12C9700C5C4AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA548A8425F12C9700C5C4AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA548A8625F12C9700C5C4AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMRXG7JS2X;
+				INFOPLIST_FILE = Phi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southsystem.Phi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA548A8725F12C9700C5C4AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMRXG7JS2X;
+				INFOPLIST_FILE = Phi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southsystem.Phi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CA548A8925F12C9700C5C4AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMRXG7JS2X;
+				INFOPLIST_FILE = PhiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southsystem.PhiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phi.app/Phi";
+			};
+			name = Debug;
+		};
+		CA548A8A25F12C9700C5C4AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMRXG7JS2X;
+				INFOPLIST_FILE = PhiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southsystem.PhiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phi.app/Phi";
+			};
+			name = Release;
+		};
+		CA548A8C25F12C9700C5C4AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMRXG7JS2X;
+				INFOPLIST_FILE = PhiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southsystem.PhiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Phi;
+			};
+			name = Debug;
+		};
+		CA548A8D25F12C9700C5C4AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMRXG7JS2X;
+				INFOPLIST_FILE = PhiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southsystem.PhiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Phi;
+			};
+			name = Release;
+		};
+		CA548AAE25F14B3500C5C4AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QMRXG7JS2X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PhiNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southsystem.PhiNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA548AAF25F14B3500C5C4AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QMRXG7JS2X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PhiNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southsystem.PhiNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA548AB225F14B3500C5C4AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMRXG7JS2X;
+				INFOPLIST_FILE = PhiNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southsystem.PhiNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phi.app/Phi";
+			};
+			name = Debug;
+		};
+		CA548AB325F14B3500C5C4AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMRXG7JS2X;
+				INFOPLIST_FILE = PhiNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.southsystem.PhiNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phi.app/Phi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA548A5325F12C9500C5C4AA /* Build configuration list for PBXProject "Phi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA548A8325F12C9700C5C4AA /* Debug */,
+				CA548A8425F12C9700C5C4AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA548A8525F12C9700C5C4AA /* Build configuration list for PBXNativeTarget "Phi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA548A8625F12C9700C5C4AA /* Debug */,
+				CA548A8725F12C9700C5C4AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA548A8825F12C9700C5C4AA /* Build configuration list for PBXNativeTarget "PhiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA548A8925F12C9700C5C4AA /* Debug */,
+				CA548A8A25F12C9700C5C4AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA548A8B25F12C9700C5C4AA /* Build configuration list for PBXNativeTarget "PhiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA548A8C25F12C9700C5C4AA /* Debug */,
+				CA548A8D25F12C9700C5C4AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA548AAD25F14B3500C5C4AA /* Build configuration list for PBXNativeTarget "PhiNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA548AAE25F14B3500C5C4AA /* Debug */,
+				CA548AAF25F14B3500C5C4AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA548AB125F14B3500C5C4AA /* Build configuration list for PBXNativeTarget "PhiNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA548AB225F14B3500C5C4AA /* Debug */,
+				CA548AB325F14B3500C5C4AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CA548A6425F12C9500C5C4AA /* Phi.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CA548A6525F12C9500C5C4AA /* Phi.xcdatamodel */,
+			);
+			currentVersion = CA548A6525F12C9500C5C4AA /* Phi.xcdatamodel */;
+			path = Phi.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CA548A5025F12C9500C5C4AA /* Project object */;
+}
