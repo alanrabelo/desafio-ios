@@ -41,11 +41,19 @@ class BalanceView: UIView, ViewConfiguration {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = PhiColors.green.color
         label.font = UIFont.preferredFont(forTextStyle: .headline).withSize(27)
-        label.text = "R$ 150,00"
+        label.text = ""
         return label
     }()
     
-    let verticalStack: UIStackView = {
+    private let censorBar: UIView = {
+        let view = UIView()
+        view.backgroundColor = PhiColors.green.color
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 2
+        return view
+    }()
+    
+    private let verticalStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
@@ -55,7 +63,7 @@ class BalanceView: UIView, ViewConfiguration {
         return stack
     }()
     
-    let horizontalStack: UIStackView = {
+    private let horizontalStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
@@ -66,6 +74,16 @@ class BalanceView: UIView, ViewConfiguration {
         return stack
     }()
     
+    private var shouldCensorAmount: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "shouldCensorAmount")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: "shouldCensorAmount")
+            updateCensorship(shouldCensorAmount: shouldCensorAmount)
+        }
+    }
     
     func buildViewHierarchy() {
         horizontalStack.addArrangedSubview(balanceTitle)
@@ -75,6 +93,7 @@ class BalanceView: UIView, ViewConfiguration {
         verticalStack.addArrangedSubview(balanceLabel)
         
         addSubview(verticalStack)
+        addSubview(censorBar)
     }
     
     func setupConstraints() {
@@ -85,11 +104,31 @@ class BalanceView: UIView, ViewConfiguration {
             NSLayoutConstraint(item: verticalStack, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 65),
         ]
         
+        let censorBarConstraints = [
+            NSLayoutConstraint(item: censorBar, attribute: .centerY, relatedBy: .equal, toItem: balanceLabel, attribute: .centerY, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: censorBar, attribute: .left, relatedBy: .equal, toItem: balanceLabel, attribute: .left, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: censorBar, attribute: .width, relatedBy: .equal, toItem: balanceLabel, attribute: .width, multiplier: 1, constant: 40),
+            NSLayoutConstraint(item: censorBar, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 4),
+        ]
+        
         addConstraints(horizontalStackConstraints)
+        addConstraints(censorBarConstraints)
     }
     
     func configureViews() {
         self.backgroundColor = PhiColors.light.color
+        self.showHideBalance.addTarget(self, action: #selector(changeAmountCensorship), for: .touchUpInside)
+        updateCensorship(shouldCensorAmount: shouldCensorAmount)
+    }
+    
+    func updateCensorship(shouldCensorAmount: Bool) {
+        self.balanceLabel.alpha = shouldCensorAmount ? 0 : 1
+        self.censorBar.alpha = shouldCensorAmount ? 1 : 0
+        self.showHideBalance.setImage(shouldCensorAmount ? BalanceImages.show.image : BalanceImages.hide.image, for: .normal)
+    }
+    
+    @objc func changeAmountCensorship() {
+        self.shouldCensorAmount.toggle()
     }
     
     func updateBalance(amount: String) {
