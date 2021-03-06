@@ -15,24 +15,25 @@ class PhiNetworkTests: XCTestCase {
     let absoluteURL = "https://desafio-mobile-bff.herokuapp.com"
     lazy var cases = [PhiRoutes.balance, PhiRoutes.statement(10, 0), PhiRoutes.details(id)]
     
-    func testRoutes() throws {
-        for route in cases {
-            let expectation = self.expectation(description: "Waiting for \(route)")
-            
-            networkLayer.perform(route: route) { (result) in
-                switch result {
-                case .success(let string):
-                    print(string)
-                    expectation.fulfill()
-                case .failure(let error):
-                    XCTFail(error.localizedDescription)
-                }
-            }
-            
-            self.waitForExpectations(timeout: 20)
-        }
-    }
-    
+//    func testRoutes() throws {
+//        
+//        for route in cases {
+//            let expectation = self.expectation(description: "Waiting for \(route)")
+//            
+//            networkLayer.perform(route: route) { (result: Result<Decodable, Error>) in
+//                switch result {
+//                case .success(let string):
+//                    print(string)
+//                    expectation.fulfill()
+//                case .failure(let error):
+//                    XCTFail(error.localizedDescription)
+//                }
+//            }
+//            
+//            self.waitForExpectations(timeout: 20)
+//        }
+//    }
+//    
     func testRequestComposition() throws {
         for route in cases {
             XCTAssertTrue(route.method == "GET")

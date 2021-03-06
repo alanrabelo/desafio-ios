@@ -19,8 +19,8 @@ class HeaderView: UIView, ViewConfiguration {
     
     func setupConstraints() {
         let labelConstraints = [
-            NSLayoutConstraint(item: label, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 20),
-            NSLayoutConstraint(item: label, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: label, attribute: .left, relatedBy: .equal, toItem: safeAreaLayoutGuide, attribute: .left, multiplier: 1, constant: 20),
+            NSLayoutConstraint(item: label, attribute: .right, relatedBy: .equal, toItem: safeAreaLayoutGuide, attribute: .right, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0),
         ]

@@ -27,7 +27,7 @@ class BalanceStatementViewModel: NSObject {
     }
     
     private var page = 0
-    private let numberOfItems = 15
+    private let numberOfItems = 10
     private var noMoreData = false
     
     let reuseIdentifier: String = "statementCell"

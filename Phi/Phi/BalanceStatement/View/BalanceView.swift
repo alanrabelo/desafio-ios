@@ -99,8 +99,8 @@ class BalanceView: UIView, ViewConfiguration {
     func setupConstraints() {
         let horizontalStackConstraints = [
             NSLayoutConstraint(item: verticalStack, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: verticalStack, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 20),
-            NSLayoutConstraint(item: verticalStack, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: -20),
+            NSLayoutConstraint(item: verticalStack, attribute: .left, relatedBy: .equal, toItem: safeAreaLayoutGuide, attribute: .left, multiplier: 1, constant: 20),
+            NSLayoutConstraint(item: verticalStack, attribute: .right, relatedBy: .equal, toItem: safeAreaLayoutGuide, attribute: .right, multiplier: 1, constant: -20),
             NSLayoutConstraint(item: verticalStack, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 65),
         ]
         

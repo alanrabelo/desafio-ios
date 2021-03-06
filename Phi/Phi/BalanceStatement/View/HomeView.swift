@@ -31,7 +31,7 @@ class HomeView: UIView {
     // MARK: - Initializers
     init() {
         super.init(frame: .zero)
-        self.backgroundColor = .white
+        self.backgroundColor = .systemBackground
     }
     
     required init?(coder: NSCoder) {

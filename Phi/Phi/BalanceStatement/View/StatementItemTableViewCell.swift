@@ -47,9 +47,8 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = PhiColors.green.color
-        view.layer.borderWidth = 2
+        view.layer.borderWidth = 3
         view.layer.cornerRadius = 7
-        view.layer.borderColor = PhiColors.light.color.cgColor
         return view
     }()
     
@@ -108,6 +107,8 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
         label.isHidden = true
         label.backgroundColor = PhiColors.green.color
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.layer.cornerRadius = 5
+        label.clipsToBounds = true
         return label
     }()
     
@@ -177,7 +178,9 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
             return
         }
         self.background.backgroundColor = isPix ? PhiColors.light.color : .systemBackground
+        self.backgroundColor = .systemBackground
         self.pixLabel.isHidden = !isPix
+        self.greenDot.layer.borderColor = self.background.backgroundColor?.cgColor
     }
     
     func setup() {
