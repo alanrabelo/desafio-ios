@@ -8,62 +8,53 @@
 import Foundation
 import PhiNetwork
 
-protocol StatementDetailsViewModelDelegate {
-    func errorLoadingDetails()
-    func didFinishLoadingDetails(forItem item: StatementDetailsViewModel)
-}
-
 class StatementDetailsViewModel {
-    
-    private var statement: StatementItem {
-        didSet {
-            loadDetails()
+        
+    func value(field: StatementDetailsFields) -> String? {
+        switch field {
+        
+        case .details:
+            return self.details
+        case .amount:
+            return self.amount
+        case .destination:
+            return self.destination
+        case .bank:
+            return bankName
+        case .datetime:
+            return self.date
+        case .authCode:
+            return self.authNumber
         }
     }
     
     private var statementDetails: StatementDetails?
-    var delegate: StatementDetailsViewModelDelegate?
     
-    var type: String {
-        statementDetails?.tType ?? "Nenhum tipo encontrado"
+    var details: String? {
+        statementDetails?.details?.capitalized
     }
     
     var amount: String {
         (Double(statementDetails?.amount ?? 0)/100).monetary
     }
     
-    var destination: String {
-        statementDetails?.to ?? "Destino não informado"
+    var destination: String? {
+        statementDetails?.destination
     }
     
-    var date: String {
-        statementDetails?.createdAt ?? "Sem data"
+    var bankName: String? {
+        statementDetails?.bank
+    }
+    
+    var date: String? {
+        statementDetails?.date?.long
     }
         
-    var authNumber: String {
-        statementDetails?.authentication ?? "Transação sem autenticação"
+    var authNumber: String? {
+        statementDetails?.authentication
     }
     
-    
-    init(statement: StatementItem) {
-        self.statement = statement
-    }
-    
-    func loadDetails() {
-        
-        guard let id = self.statement.id else {
-            delegate?.errorLoadingDetails()
-            return
-        }
-        
-        NetworkLayer.shared.perform(route: .details(id)) { [weak self] (result: Result<StatementDetails, Error>) in
-            switch result {
-            case .success(let statementDetails):
-                self?.statementDetails = statementDetails
-                self?.delegate?.didFinishLoadingDetails(forItem: StatementDetailsViewModel(statement: statementDetails))
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+    init(statementDetails: StatementDetails) {
+        self.statementDetails = statementDetails
     }
 }

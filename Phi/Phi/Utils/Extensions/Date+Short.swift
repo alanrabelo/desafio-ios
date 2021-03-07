@@ -8,17 +8,26 @@
 import Foundation
 
 extension String {
-    var short: String {
-        let dateString = String(self.split(separator: "T")[0])
+    
+    var asDate: Date? {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        
-        //"2020-11-29T03:00:00Z"
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         formatter.timeZone = TimeZone(identifier: "UTC")
-        
-        guard let date = formatter.date(from: dateString) else { return "Unknown Date" }
-        
+        return formatter.date(from: self)
+    }
+    
+    var short: String? {
+        let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM"
+        guard let date = self.asDate else { return nil }
         return formatter.string(from: date)
     }
+    
+    var long: String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy - HH:mm:SS"
+        guard let date = self.asDate else { return nil }
+        return formatter.string(from: date)
+    }
+    
 }

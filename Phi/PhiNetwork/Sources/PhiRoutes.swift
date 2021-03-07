@@ -81,7 +81,7 @@ public enum PhiRoutes {
         
         var request = URLRequest(url: url)
         request.httpMethod = self.method
-        
+        request.cachePolicy = .returnCacheDataElseLoad
         self.header.forEach { (key, value) in
             request.setValue(value, forHTTPHeaderField: key)
         }

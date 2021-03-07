@@ -37,6 +37,7 @@ class ViewController: UIViewController, Coordinatable {
         self.navigationController?.navigationBar.barTintColor = PhiColors.light.color
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+ 
     }
  
     override func viewWillAppear(_ animated: Bool) {
@@ -59,7 +60,7 @@ class ViewController: UIViewController, Coordinatable {
 extension ViewController: BalanceStatementViewModelDelegate {
     
     func didSelectElement(item: StatementItem) {
-        (coordinator as? AppCoordinator)?.presentDetails(viewModel: StatementDetailsViewModel(statement: item))
+        (coordinator as? AppCoordinator)?.presentDetails(viewModel: StatementViewModel(statement: item))
     }
     
     func didLoadBalance(amount: String) {

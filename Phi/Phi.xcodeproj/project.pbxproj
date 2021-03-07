@@ -17,7 +17,6 @@
 		CA548A8125F12C9700C5C4AA /* PhiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548A8025F12C9700C5C4AA /* PhiUITests.swift */; };
 		CA548A9F25F14B3500C5C4AA /* PhiNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA548A9625F14B3500C5C4AA /* PhiNetwork.framework */; };
 		CA548AA625F14B3500C5C4AA /* PhiNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548AA525F14B3500C5C4AA /* PhiNetworkTests.swift */; };
-		CA548AA825F14B3500C5C4AA /* PhiNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = CA548A9825F14B3500C5C4AA /* PhiNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA548AAB25F14B3500C5C4AA /* PhiNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA548A9625F14B3500C5C4AA /* PhiNetwork.framework */; };
 		CA548AAC25F14B3500C5C4AA /* PhiNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA548A9625F14B3500C5C4AA /* PhiNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA548ABA25F14B5000C5C4AA /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA548AB925F14B5000C5C4AA /* NetworkLayer.swift */; };
@@ -40,6 +39,7 @@
 		CACC923B25F2C58F008D0DB9 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC923A25F2C58F008D0DB9 /* BalanceView.swift */; };
 		CACC924125F2D332008D0DB9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC924025F2D332008D0DB9 /* HeaderView.swift */; };
 		CACC924725F2E7DE008D0DB9 /* Double+Monetary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC924625F2E7DE008D0DB9 /* Double+Monetary.swift */; };
+		CACC92B925F547FC008D0DB9 /* LabelGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC92B825F547FC008D0DB9 /* LabelGroupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +110,6 @@
 		CA548A8025F12C9700C5C4AA /* PhiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhiUITests.swift; sourceTree = "<group>"; };
 		CA548A8225F12C9700C5C4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA548A9625F14B3500C5C4AA /* PhiNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhiNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA548A9825F14B3500C5C4AA /* PhiNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhiNetwork.h; sourceTree = "<group>"; };
 		CA548A9925F14B3500C5C4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA548A9E25F14B3500C5C4AA /* PhiNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhiNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA548AA525F14B3500C5C4AA /* PhiNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhiNetworkTests.swift; sourceTree = "<group>"; };
@@ -135,6 +134,7 @@
 		CACC923A25F2C58F008D0DB9 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		CACC924025F2D332008D0DB9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		CACC924625F2E7DE008D0DB9 /* Double+Monetary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Monetary.swift"; sourceTree = "<group>"; };
+		CACC92B825F547FC008D0DB9 /* LabelGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelGroupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				CA548AB825F14B4300C5C4AA /* Sources */,
-				CA548A9825F14B3500C5C4AA /* PhiNetwork.h */,
 				CA548A9925F14B3500C5C4AA /* Info.plist */,
 			);
 			path = PhiNetwork;
@@ -362,6 +361,7 @@
 			children = (
 				CA548BB125F1C0FC00C5C4AA /* StatementDetailsViewController.swift */,
 				CA548BBB25F1C10500C5C4AA /* StatementDetailsView.swift */,
+				CACC92B825F547FC008D0DB9 /* LabelGroupView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -383,7 +383,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA548AA825F14B3500C5C4AA /* PhiNetwork.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CACC92B925F547FC008D0DB9 /* LabelGroupView.swift in Sources */,
 				CA548A6025F12C9500C5C4AA /* ViewController.swift in Sources */,
 				CACC923B25F2C58F008D0DB9 /* BalanceView.swift in Sources */,
 				CA548BC225F1C15500C5C4AA /* StatementDetailsViewModel.swift in Sources */,

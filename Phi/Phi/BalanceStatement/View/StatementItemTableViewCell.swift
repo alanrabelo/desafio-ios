@@ -115,16 +115,16 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
     func buildViewHierarchy() {
         
         addSubview(background)
-                
+        
         verticalStack.addArrangedSubview(labelDetails)
         verticalStack.addArrangedSubview(labelDestination)
         verticalStack.addArrangedSubview(labelAmmount)
-                
+        
         horizontalStack.addArrangedSubview(verticalStack)
         horizontalStack.addArrangedSubview(labelDate)
         background.addSubview(verticalLine)
         verticalLine.addSubview(greenDot)
-
+        
         background.addSubview(horizontalStack)
         background.addSubview(pixLabel)
     }
@@ -151,7 +151,7 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
             NSLayoutConstraint(item: horizontalStack, attribute: .right, relatedBy: .equal, toItem: safeAreaLayoutGuide, attribute: .right, multiplier: 1, constant: -20),
             NSLayoutConstraint(item: horizontalStack, attribute: .centerY, relatedBy: .equal, toItem: background, attribute: .centerY, multiplier: 1, constant: 0),
         ]
-
+        
         let greenDotConstraints = [
             NSLayoutConstraint(item: greenDot, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 14),
             NSLayoutConstraint(item: greenDot, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 14),
@@ -165,7 +165,7 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
             NSLayoutConstraint(item: pixLabel, attribute: .centerX, relatedBy: .equal, toItem: labelDate, attribute: .centerX, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: pixLabel, attribute: .top, relatedBy: .equal, toItem: background, attribute: .top, multiplier: 1, constant: 10),
         ]
-
+        
         self.addConstraints(backgroundCosntraints)
         self.addConstraints(horizontalStackConstraints)
         self.addConstraints(barConstraints)
@@ -180,7 +180,7 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
         self.background.backgroundColor = isPix ? PhiColors.light.color : .systemBackground
         self.backgroundColor = .systemBackground
         self.pixLabel.isHidden = !isPix
-        self.greenDot.layer.borderColor = self.background.backgroundColor?.cgColor
+        self.greenDot.layer.borderColor = (isPix ? PhiColors.light.color : .systemBackground).cgColor
     }
     
     func setup() {
@@ -189,5 +189,14 @@ class StatementItemTableViewCell: UITableViewCell, ViewConfiguration {
         self.labelAmmount.text = viewModel?.value
         self.labelDate.text = viewModel?.date
         self.selectionStyle = .none
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if (traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection)) {
+            guard let isPix = viewModel?.isPix else {
+                return
+            }
+            self.greenDot.layer.borderColor = (isPix ? PhiColors.light.color : .systemBackground).cgColor
+        }
     }
 }

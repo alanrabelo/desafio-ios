@@ -21,7 +21,7 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func presentDetails(viewModel: StatementDetailsViewModel) {
+    func presentDetails(viewModel: StatementViewModel) {
         let detailsViewController = StatementDetailsViewController(coordinator: self, item: viewModel)
         navigationController.pushViewController(detailsViewController, animated: true)
     }

@@ -8,49 +8,51 @@
 import Foundation
 import UIKit
 
-class StatementDetailsViewController: UIViewController, Coordinatable {    
-
-    internal var coordinator: Coordinator
-    private weak var viewModel: StatementDetailsViewModel?
+class StatementDetailsViewController: UIViewController, Coordinatable {
     
-    init(coordinator: Coordinator, item: StatementDetailsViewModel) {
+    internal var coordinator: Coordinator
+    private var viewModel: StatementViewModel?
+    
+    init(coordinator: Coordinator, item: StatementViewModel) {
         self.coordinator = coordinator
         self.viewModel = item
         super.init(nibName: nil, bundle: nil)
-        self.title = "Comprovante"
+        title = "Comprovante"
     }
     
     override func loadView() {
-        self.view = StatementDetailsView()
+        let view = StatementDetailsView()
+        view.delegate = viewModel
+        self.view = view
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel?.delegate = self
         viewModel?.loadDetails()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        (self.view as? StatementDetailsView)?.setupViewConfiguration()
+        navigationController?.navigationBar.tintColor = PhiColors.dark.color
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem()
     }
     
     required init?(coder: NSCoder) {
         coordinator = AppCoordinator(navigationController: UINavigationController())
         super.init(coder: coder)
     }
-
+    
 }
 
 extension StatementDetailsViewController: StatementDetailsViewModelDelegate {
+    
     func errorLoadingDetails() {
         print("Error in details")
     }
     
-    func didFinishLoadingDetails(forItem item: StatementDetailsViewModel) {
+    func didFinishLoadingDetails() {
         DispatchQueue.main.async {
-            guard let view = self.view as? StatementDetailsView else {
+            guard let view = self.view as? StatementDetailsView, let details = self.viewModel?.statementDetails else {
                 return
             }
-            view.setup(item: item)
+            view.setup(viewModel: details)
         }
     }
 }
