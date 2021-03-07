@@ -40,11 +40,6 @@
 		CACC923B25F2C58F008D0DB9 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC923A25F2C58F008D0DB9 /* BalanceView.swift */; };
 		CACC924125F2D332008D0DB9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC924025F2D332008D0DB9 /* HeaderView.swift */; };
 		CACC924725F2E7DE008D0DB9 /* Double+Monetary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC924625F2E7DE008D0DB9 /* Double+Monetary.swift */; };
-		CACC925B25F3226C008D0DB9 /* icon_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACC925925F3226C008D0DB9 /* icon_dark@2x.png */; };
-		CACC925C25F3226C008D0DB9 /* icon_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACC925A25F3226C008D0DB9 /* icon_dark@3x.png */; };
-		CACC926325F32277008D0DB9 /* icon_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACC926125F32277008D0DB9 /* icon_light@2x.png */; };
-		CACC926425F32277008D0DB9 /* icon_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACC926225F32277008D0DB9 /* icon_light@3x.png */; };
-		CACC927325F3256B008D0DB9 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACC927225F3256B008D0DB9 /* Icons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,11 +135,6 @@
 		CACC923A25F2C58F008D0DB9 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		CACC924025F2D332008D0DB9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		CACC924625F2E7DE008D0DB9 /* Double+Monetary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Monetary.swift"; sourceTree = "<group>"; };
-		CACC925925F3226C008D0DB9 /* icon_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_dark@2x.png"; path = "Phi/Assets.xcassets/DarkIcon.appiconset/icon_dark@2x.png"; sourceTree = SOURCE_ROOT; };
-		CACC925A25F3226C008D0DB9 /* icon_dark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_dark@3x.png"; path = "Phi/Assets.xcassets/DarkIcon.appiconset/icon_dark@3x.png"; sourceTree = SOURCE_ROOT; };
-		CACC926125F32277008D0DB9 /* icon_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_light@2x.png"; path = "Phi/Assets.xcassets/LightIcon.appiconset/icon_light@2x.png"; sourceTree = SOURCE_ROOT; };
-		CACC926225F32277008D0DB9 /* icon_light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_light@3x.png"; path = "Phi/Assets.xcassets/LightIcon.appiconset/icon_light@3x.png"; sourceTree = SOURCE_ROOT; };
-		CACC927225F3256B008D0DB9 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +205,6 @@
 		CA548A5A25F12C9500C5C4AA /* Phi */ = {
 			isa = PBXGroup;
 			children = (
-				CACC925825F3220A008D0DB9 /* App Icons */,
 				CA548BAE25F1C0E500C5C4AA /* StatementDetails */,
 				CA548BA025F1BBC700C5C4AA /* Utils */,
 				CA548B0F25F165B600C5C4AA /* BalanceStatement */,
@@ -337,7 +326,6 @@
 		CA548BA025F1BBC700C5C4AA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CACC927125F3255E008D0DB9 /* Icons */,
 				CA5F623325F27C9E00139D7C /* Extensions */,
 				CA548BA125F1BBD200C5C4AA /* Presentation */,
 			);
@@ -386,25 +374,6 @@
 				CACC924625F2E7DE008D0DB9 /* Double+Monetary.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		CACC925825F3220A008D0DB9 /* App Icons */ = {
-			isa = PBXGroup;
-			children = (
-				CACC926125F32277008D0DB9 /* icon_light@2x.png */,
-				CACC926225F32277008D0DB9 /* icon_light@3x.png */,
-				CACC925925F3226C008D0DB9 /* icon_dark@2x.png */,
-				CACC925A25F3226C008D0DB9 /* icon_dark@3x.png */,
-			);
-			path = "App Icons";
-			sourceTree = "<group>";
-		};
-		CACC927125F3255E008D0DB9 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				CACC927225F3256B008D0DB9 /* Icons.swift */,
-			);
-			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,11 +539,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CACC926325F32277008D0DB9 /* icon_light@2x.png in Resources */,
-				CACC926425F32277008D0DB9 /* icon_light@3x.png in Resources */,
-				CACC925B25F3226C008D0DB9 /* icon_dark@2x.png in Resources */,
 				CA548A6B25F12C9700C5C4AA /* LaunchScreen.storyboard in Resources */,
-				CACC925C25F3226C008D0DB9 /* icon_dark@3x.png in Resources */,
 				CA548A6825F12C9700C5C4AA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,7 +601,6 @@
 				CA548BB225F1C0FC00C5C4AA /* StatementDetailsViewController.swift in Sources */,
 				CA548A5E25F12C9500C5C4AA /* SceneDelegate.swift in Sources */,
 				CA548B0A25F164A600C5C4AA /* Coordinator.swift in Sources */,
-				CACC927325F3256B008D0DB9 /* Icons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,7 +799,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = DarkIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 338S3PS486;
@@ -855,7 +819,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = DarkIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 338S3PS486;

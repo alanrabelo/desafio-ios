@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-class StatementDetailsViewController: UIViewController, Coordinatable {
+class StatementDetailsViewController: UIViewController, Coordinatable {    
 
     internal var coordinator: Coordinator
-    private var viewModel: StatementDetailsViewModel?
+    private weak var viewModel: StatementDetailsViewModel?
     
     init(coordinator: Coordinator, item: StatementDetailsViewModel) {
         self.coordinator = coordinator
